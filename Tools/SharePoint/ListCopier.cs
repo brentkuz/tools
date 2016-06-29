@@ -1,3 +1,5 @@
+//Author: Brent Kuzmanich
+//Comment: Class used to map a SharePoint list to another.
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +30,7 @@ namespace SPListCopyConsole
         }
 
         #region public methods
-        //create mappings between list columns
+        //Method to create mappings between list columns
         public void AddColumnMaps(string col)
         {
             //split individual maps
@@ -42,6 +44,7 @@ namespace SPListCopyConsole
                 columnMaps.Add(tCol, sCol);                
             }
         }
+        //Method to add a format to the resultant colum data
         public void AddColumnFormat(string targColName, Delegate del)
         {
             if(columnMaps[targColName] != null)
@@ -49,7 +52,7 @@ namespace SPListCopyConsole
                 columnFormats[targColName] = del;
             }
         }
-
+        //Method to process copying
         public void CopyListItems()
         {
             if(columnMaps.Count > 0)
@@ -87,10 +90,6 @@ namespace SPListCopyConsole
                     Console.WriteLine("Item: " + item.Id + " copied");
                 }
             }
-        }
-        public void CloneList()
-        {
-
         }
         #endregion
     }

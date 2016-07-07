@@ -45,6 +45,7 @@
     <Compile Include="CQRS\IDatabase.cs" />
     <Compile Include="CQRS\IQuery.cs" />
     <Compile Include="DelegateMap.cs" />
+    <Compile Include="EntityReaderHelper.cs" />
     <Compile Include="GenericRepository.cs" />
     <Compile Include="LibUserExtensions.cs" />
     <Compile Include="LoggingExtensions.cs" />
